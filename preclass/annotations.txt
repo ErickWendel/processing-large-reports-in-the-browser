@@ -1,1 +1,114 @@
 https://www.kaggle.com/datasets/foenix/slc-crime?select=SLC_Police_Calls_2013__2016_cleaned_geocoded.csv
+
+
+npm init -y
+npm i -D browser-sync@2.27.11
+
+package.json 
+  start: browser-sync -w
+
+touch index.html 
+  all html
+
+mkdir src 
+  touch 
+    view -> falar que é tudo que é api de tela 
+      export default class View {}
+    service -> tudo que é regra de negocio
+      export default class Service {}
+    worker -> tudo que vai rodar em segundo plano no browser
+      console.log(`I'm ready`)
+      onmessage = (msg) => console.log('hello from worker')
+    controller -> o intermedio entre as camadas
+      export default class Controller {}
+    index -> factory, inicializacao das intancias
+      all
+index.html 
+  import index.js 
+
+-> should see a message on worker
+
+  view 
+    setFileSize
+    configureOnFileChange
+  controller 
+    constructor
+      all 
+    configureOnFileChange
+    
+    init 
+      configureOnFileChange
+-> should show raw bytes 
+    formatBytes
+      all 
+    configureOnFileChange
+      add formatBytes
+-> should show bytes 
+  view 
+    configureOnFormSubmit
+      all 
+  controller 
+    configureOnFormSubmit
+    init
+      configureOnFormSubmit
+        log form
+> after submit should log results 
+  view 
+    isWorkerEnabled
+    updateProgress
+
+  controller 
+    configureOnFormSubmit
+      isWorkerEnabled
+       only the if 
+-> should receive a message on worker
+
+  controller 
+    #events 
+      progress all 
+      onOcurrenceUpdate only log results 
+  worker 
+    postMessage({ eventType: 'progress', 100 })
+    postMessage({ eventType: 'ocurrenceUpdate',  })
+-> progress should be at 100% and ocurrenceUpdate should be logged 
+
+  service
+    processFile only signature
+  worker 
+    all
+  
+  service 
+    file.stream 
+    .pipeThrough(new TextDecoderStream())
+    .pipeTo(new WritableStream({
+      write(chunk) {
+        console.log(' chunk', chunk)
+      }
+    }))
+> should print file contents 
+  service 
+    #csvToJSON (linesLength)
+      all without progress 
+
+> writable should print results as json     
+
+  service 
+    #setupProgress
+      all 
+    processFile
+      progressFn
+    csvToJSON
+      progressFn
+> should print progress correctly      
+
+  service 
+    #findOcurrencies
+      all 
+  controller
+      #events
+        ocurrenceUpdate
+          all 
+> all application should work 
+> try uploading with the big file and show that only measuring by the break line is not enough, thats why the linesLength and ocurrences fail on big files 
+  - task for you to figure out how to handle this 
+            

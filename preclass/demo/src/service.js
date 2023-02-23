@@ -59,7 +59,7 @@ export default class Service {
       transform(chunk, controller) {
         progressFn(chunk.length)
         const lines = chunk.split('\n')
-        linesLength.counter += lines.length -1
+        linesLength.counter += lines.length
 
         if (!columns.length) {
           const firstLine = lines.shift()
@@ -78,7 +78,6 @@ export default class Service {
           }
 
           controller.enqueue(currentItem)
-          controller.desiredSize
         }
       },
     })

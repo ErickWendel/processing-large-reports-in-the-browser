@@ -1,7 +1,7 @@
 import Service from './service.js'
 const service = new Service()
 
-console.log('I was loaded!')
+console.log(`I'm alive!`)
 postMessage({ eventType: 'alive' })
 
 onmessage = ({ data }) => {
