@@ -2,7 +2,7 @@
 
 ## About
 
-This is the examples shown in my live screen about [Multihreading and performance in the browser (pt-br)](https://youtube.com/live/-wXPxJYhZeI?feature=share)
+This is the examples shown in my live screen about [Multithreading and performance in the browser (pt-br)](https://youtube.com/live/-wXPxJYhZeI?feature=share)
 
 First of all, leave your star 🌟 on this repo.
 
