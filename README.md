@@ -10,7 +10,7 @@ Access our [**exclusive telegram channel**](https://bit.ly/canalerickwendel) so 
 
 ## Complete source code
 - Access it in [app](./recorded/)
-- Checkout the [live demo](https://erickwendel.github.io/processing-large-reports-in-the-browser/recorded).
+- Checkout the [live demo](https://erickwendel.github.io/processing-large-reports-in-the-browser/recorded) (preferentially on Chrome browser)
   - Upload the file [database-small.csv](./recorded/assets/database-small.csv) or download the [SLC_Police_Calls_2013__2016_cleaned_geocoded.csv(210.83 MB)](https://www.kaggle.com/datasets/foenix/slc-crime?select=SLC_Police_Calls_2013__2016_cleaned_geocoded.csv)on Kaggle.
 
 
