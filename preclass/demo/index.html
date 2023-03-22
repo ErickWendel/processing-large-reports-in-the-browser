@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form-group {
+      margin: 10px
+    }
+  </style>
+</head>
+
+<body>
+  <form id="form">
+    <div class="form-group">
+      <label for="field">Description</label>
+      <input type="text" name="description" id="description">
+    </div>
+
+    <div class="form-group">
+      <label for="file">CSV File</label>
+      <input type="file" id="csv-file" accept=".csv">
+    </div>
+    <div class="form-control">
+      <input type="checkbox" id="worker" name="worker" value="worker" checked />
+      <label for="worker">Should use worker threads?</label>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" id="button" value="Search">
+      <input type="reset" value="Reset">
+    </div>
+    <div class="form-control">
+      <output id="file-size"></output>
+    </div>
+    <div class="form-control">
+      <label for="file">Processing progress:</label>
+      <progress id="progress" value="0" max="100">0% </progress>
+    </div>
+    <div class="form-control">
+      <output id="debug"></output>
+    </div>
+  </form>
+
+
+  <script src="./src/index.js" type="module"></script>
+</body>
+
+</html>
